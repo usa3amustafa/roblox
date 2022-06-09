@@ -390,7 +390,9 @@ footer {
   .header-img {
     display: none;
   }
-
+  .hamburger {
+    display: block;
+  }
   .nav-items {
     display: block;
     position: absolute;
