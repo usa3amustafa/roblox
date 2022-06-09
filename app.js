@@ -13,7 +13,7 @@ close.addEventListener('click', () => {
 // counter
 const counters = document.querySelectorAll('.article-two-number')
 
-const speed = 300
+const speed = 500
 
 counters.forEach(counter => {
   const updateCount = () => {
