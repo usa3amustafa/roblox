@@ -1,13 +1,8 @@
 const hamburger = document.querySelector('.hamburger')
 const navbar = document.querySelector('.nav-items')
-const close = document.querySelector('.close')
 
 hamburger.addEventListener('click', () => {
   navbar.classList.add('show-navbar')
-})
-
-close.addEventListener('click', () => {
-  navbar.classList.remove('show-navbar')
 })
 
 // counter
@@ -31,4 +26,12 @@ counters.forEach(counter => {
   }
 
   updateCount()
+})
+
+document.body.addEventListener('click', e => {
+  if (e.target.classList.contains('hamburger')) {
+    navbar.classList.add('show-navbar')
+  } else {
+    navbar.classList.remove('show-navbar')
+  }
 })

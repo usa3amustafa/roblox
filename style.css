@@ -30,6 +30,7 @@ ul {
 
 .btn {
   padding: 1rem 2rem;
+  display: inline-block;
   border-radius: 5px;
   text-decoration: none;
 }
@@ -37,20 +38,25 @@ ul {
 .pri-btn {
   color: #fff;
   background-color: #31c774;
+  border: 1px solid #31c774;
 
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 .pri-btn:hover {
   background-color: #1d8d4f;
+  border: 1px solid #1d8d4f;
 }
 
 .sec-btn {
   color: #31c774;
   background-color: #f5f6fa;
   transition: color 0.3s ease-in-out;
+  border: 1px solid #31c774;
 }
 .sec-btn:hover {
   color: #1d8d4f;
+  border: 1px solid #1d8d4f;
+  transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 
 section {
@@ -63,7 +69,6 @@ section {
 
 .hamburger {
   display: none;
-  font-size: 3rem;
   color: #1d8d4f;
 }
 .close {
@@ -337,9 +342,11 @@ footer {
   }
   .header-text-title {
     max-width: 100%;
-    font-size: 2.5rem;
+    font-size: 2.25rem;
   }
   .header-text-btns {
+    flex-direction: column;
+    gap: 0.5rem;
     justify-content: center;
   }
   .section-one {
@@ -374,6 +381,9 @@ footer {
 }
 
 @media (max-width: 500px) {
+  .logo {
+    width: 2rem;
+  }
   .btn {
     padding: 0.75rem 1.25rem;
   }
@@ -388,9 +398,10 @@ footer {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
-    padding: 6rem 2rem 2rem 2rem;
+    gap: 1rem;
+    padding: 2rem;
     z-index: 1000;
     background-color: #f5f6fa;
     box-shadow: 2px 2px 10px 2px rgb(221, 221, 221);
@@ -419,6 +430,7 @@ footer {
   .hamburger {
     display: block;
     cursor: pointer;
+    font-size: 2rem;
   }
 
   .section-one {
