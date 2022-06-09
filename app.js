@@ -1,9 +1,6 @@
 const hamburger = document.querySelector('.hamburger')
+const close = document.querySelector('.close')
 const navbar = document.querySelector('.nav-items')
-
-hamburger.addEventListener('click', () => {
-  navbar.classList.add('show-navbar')
-})
 
 // counter
 const counters = document.querySelectorAll('.article-two-number')
@@ -28,10 +25,23 @@ counters.forEach(counter => {
   updateCount()
 })
 
+let isOpen = false
+
 document.body.addEventListener('click', e => {
-  if (e.target.classList.contains('hamburger')) {
+  if (e.target.classList.contains('hamburger') && isOpen === false) {
     navbar.classList.add('show-navbar')
+    hamburger.style.display = 'none'
+    close.style.display = 'block'
+    isOpen = true
+  } else if (e.target.classList.contains('close') && isOpen === true) {
+    navbar.classList.remove('show-navbar')
+    hamburger.style.display = 'block'
+    close.style.display = 'none'
+    isOpen = false
   } else {
     navbar.classList.remove('show-navbar')
+    hamburger.style.display = 'block'
+    close.style.display = 'none'
+    isOpen = false
   }
 })
