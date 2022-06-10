@@ -27,21 +27,27 @@ counters.forEach(counter => {
 
 let isOpen = false
 
-document.body.addEventListener('click', e => {
-  if (e.target.classList.contains('hamburger') && isOpen === false) {
-    navbar.classList.add('show-navbar')
-    hamburger.style.display = 'none'
-    close.style.display = 'block'
-    isOpen = true
-  } else if (e.target.classList.contains('close') && isOpen === true) {
-    navbar.classList.remove('show-navbar')
-    hamburger.style.display = 'block'
-    close.style.display = 'none'
-    isOpen = false
-  } else {
-    navbar.classList.remove('show-navbar')
-    hamburger.style.display = 'block'
-    close.style.display = 'none'
-    isOpen = false
-  }
-})
+let width = screen.width
+
+console.log(width)
+
+if (width <= 500) {
+  document.body.addEventListener('click', e => {
+    if (e.target.classList.contains('hamburger') && isOpen === false) {
+      navbar.classList.add('show-navbar')
+      hamburger.style.display = 'none'
+      close.style.display = 'block'
+      isOpen = true
+    } else if (e.target.classList.contains('close') && isOpen === true) {
+      navbar.classList.remove('show-navbar')
+      hamburger.style.display = 'block'
+      close.style.display = 'none'
+      isOpen = false
+    } else {
+      navbar.classList.remove('show-navbar')
+      hamburger.style.display = 'block'
+      close.style.display = 'none'
+      isOpen = false
+    }
+  })
+}
