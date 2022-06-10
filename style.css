@@ -395,10 +395,11 @@ footer {
   }
   .nav-items {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
+    width: 40vw;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
