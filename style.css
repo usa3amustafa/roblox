@@ -6,12 +6,12 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   background-color: #f5f6fa;
   font-family: 'Poppins', sans-serif;
-  overflow-x: hidden;
 }
 
 .container {
